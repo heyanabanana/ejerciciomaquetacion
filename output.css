@@ -43,24 +43,7 @@
   color: #ff5e14;
 }
 
-.blog_section .blog_content .blog_item .blog_details ul {
-  padding: 0 3px 10px 0;
-  margin: 0;
-}
-
-.blog_section .blog_content .blog_item .blog_details ul li {
-  display: inline-block;
-  padding-right: 15px;
-  position: relative;
-  color: #7f7f7f;
-}
-
-.blog_section .blog_content .blog_item .blog_details ul li i {
-  padding-right: 7px;
-}
-
 .blog_section .blog_content .blog_item .blog_details p {
-  border-top: 1px solid #e5e5e5;
   margin-top: 4px;
   padding: 20px 0 4px;
 }
@@ -135,6 +118,10 @@
 .blog_section .blog_content .owl-nav .owl-prev:hover {
   background: #fff;
   color: #189e90;
+}
+
+owl-controls {
+  text-align: center;
 }
 
 /*# sourceMappingURL=output.css.map */
