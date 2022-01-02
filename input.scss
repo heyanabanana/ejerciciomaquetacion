@@ -1,119 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap");
+
 $corporate-1: rgb(24, 158, 144);
-$corporate-2: rgb(239, 243, 246);;
+$corporate-2: rgb(239, 243, 246);
+$text-color: #333;
+
+%font-1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 3.7em;
+  line-height: 1.18em;
+}
+
+%font-2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.19em;
+  text-transform: uppercase;
+  line-height: 1.54em;
+}
+
+%font-3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $text-color;
 }
 
-
-  .blog_section .blog_content .blog_item {
-    display: flex;
-    background: $corporate-2;
-    align-items: center;
-  }
-  .blog_section .blog_content .blog_item:hover .blog_image img {
-    transform: scale(1.1);
-  }
-  .blog_section .blog_content .blog_item .blog_image {
-    overflow: hidden;
-    padding: 0;
-  }
-  .blog_section .blog_content .blog_item .blog_image img {
-    width: 50vw;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .blog_section .blog_content .blog_item .blog_details {
-    padding: 25px 20px 30px 20px;
-  }
-  .blog_section .blog_content .blog_item .blog_details .blog_title h5 a {
-    color: #020d26;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 25px;
-    line-height: 32px;
-    font-weight: 400;
-    transition: all 0.3s;
-    text-decoration: none;
-  }
-  .blog_section .blog_content .blog_item .blog_details .blog_title h5 a:hover {
-    color: #ff5e14;
-  }
-
-  .blog_section .blog_content .blog_item .blog_details p {
-    margin-top: 4px;
-    padding: 20px 0 4px;
-  }
-  .blog_section .blog_content .blog_item .blog_details a {
-    font-size: 16px;
-    display: inline-block;
-    color: #ff5e14;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .blog_section .blog_content .blog_item .blog_details a:hover {
-    color: #020d26;
-  }
-  .blog_section .blog_content .blog_item .blog_details a i {
-    vertical-align: middle;
-    font-size: 20px;
-  }
-  .blog_section .blog_content .owl-nav {
-    display: block;
-  }
-  .blog_section .blog_content .owl-nav .owl-next {
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    text-align: center;
-    z-index: 5;
-    width: 60px;
-    height: 60px;
-    outline: 0;
-    background: #fff;
-    transition: all 0.3s;
-    color: $corporate-1;
-  }
-  .blog_section .blog_content .owl-nav .owl-next span {
-    font-size: 25px;
-    margin-top: -6px;
-    display: inline-block;
-  }
-  .blog_section .blog_content .owl-nav .owl-next:hover {
-    background: $corporate-1;
-    color: #fff;
-  }
-  .blog_section .blog_content .owl-nav .owl-prev {
-    position: absolute;
-    right: 50%;
-    bottom: 0;
-    text-align: center;
-    z-index: 5;
-    width: 60px;
-    height: 60px;
-    outline: 0;
-    background: $corporate-1;
-    color: #fff;
-    transition: all 0.3s;
-  }
-  .blog_section .blog_content .owl-nav .owl-prev span {
-    font-size: 25px;
-    margin-top: -6px;
-    display: inline-block;
-  }
-  .blog_section .blog_content .owl-nav .owl-prev:hover {
-    background: #fff;
-    color: $corporate-1;
-  }
-  owl-controls {
-    text-align: center;
+.card_section .card_content .card_item {
+  display: flex;
+  background: $corporate-2;
+  align-items: center;
+  width: 100vw;
+}
+.card_section .card_content .card_item:hover .card_image img {
+  transform: scale(1.1);
+}
+.card_section .card_content .card_item .card_image {
+  overflow: hidden;
+  padding: 0;
+}
+.card_section .card_content .card_item .card_image img {
+  width: 50vw;
+  transition: transform 0.5s ease-in-out;
 }
 
+.card_section .card_content .card_item .card_details {
+  padding-left: 5vw;
+  padding-right: 6vw;
 
- 
-  @media only screen and (max-width: 577px) {
+  max-width: 50vw;
+}
 
-  }
+.card_section .card_content .card_item .card_details .card_title h2 {
+  transition: all 0.3s;
+  @extend %font-1;
+  margin-bottom: 2.5rem;
+}
+
+.card_section .card_content .card_item .card_details .card_title h3 {
+  transition: all 0.3s;
+  @extend %font-2;
+  color: $corporate-1;
+  margin-bottom: 1rem;
+}
+
+.card_section .card_content .card_item .card_details p {
+  @extend %font-3;
+  margin: 46px 0px 22px 0px;
+}
+
+.btn_card {
+  @extend %font-3;
+  padding: 13px 35px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background: none;
+  border: 1px solid $corporate-1;
+  color: white;
+  background-color: $corporate-1;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.btn_card_light {
+  background-color: transparent;
+}
+
+.btn_card a {
+  text-decoration: none;
+  color: rgb(24, 158, 144);
+}
+
+.btn_card_group {
+  display: flex;
+}
+
+.card_section .card_content .owl-nav .owl-next {
+  position: absolute;
+  left: 50vw;
+  bottom: 0px;
+  text-align: center;
+  z-index: 5;
+  width: 70px;
+  height: 70px;
+  outline: 0;
+  color: #fff;
+  transition: all 0.3s;
+  background: $corporate-1;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_section .card_content .owl-nav .owl-next span {
+  font-size: 25px;
+  margin-top: -6px;
+  display: inline-block;
+}
+.card_section .card_content .owl-nav .owl-next:hover {
+  opacity: 0.8;
+}
+.card_section .card_content .owl-nav .owl-prev {
+  position: absolute;
+  right: 50vw;
+  bottom: 0px;
+  text-align: center;
+  z-index: 5;
+  width: 70px;
+  height: 70px;
+  outline: 0;
+  color: $corporate-1;
+  background: #fff;
+  transition: all 0.3s;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_section .card_content .owl-nav .owl-prev span {
+  font-size: 25px;
+  margin-top: -6px;
+  display: inline-block;
+}
+.card_section .card_content .owl-nav .owl-prev:hover {
+  opacity: 0.8;
+}
+
+.arrow-icon {
+  width: 25px;
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  text-align: center;
+  bottom: 40px;
+  left: 55vw;
+  z-index: 10;
+}
+
+.owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: $corporate-1;
+  display: inline-block;
+  margin: 3px;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0.3;
+}
+.active span {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 577px) {
+}
